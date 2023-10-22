@@ -1,0 +1,105 @@
+GET http://localhost:8080/api/v1/customers HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJFbmlnbWFMYXVuZHJ5IiwiZXhwIjoxNjk2NDk4MzkzLCJpYXQiOjE2OTY0OTgzMzMsIlVzZXJuYW1lIjoicmFmbHkxMjMiLCJSb2xlIjoiIiwiU2VydmljZXMiOm51bGx9.9Olna5JMDqPn_ZCE4aPqGTDrNnJLz2Sdv1vPaD_q3NU
+
+###
+POST http://localhost:8080/api/v1/register HTTP/1.1
+Authorization: "Bearer 123123213"
+Content-Type: application/json
+
+{
+    "username" : "user1",
+    "password": "password3"
+}
+
+###
+POST http://localhost:8080/api/v1/login HTTP/1.1
+Content-Type: application/json
+
+{
+     "username" : "user2",
+    "password": "password2"
+}
+
+
+###
+GET http://localhost:8080/api/v1/employees/bdb976a9-b856-48ca-85ec-2380cff2b492 HTTP/1.1
+
+###
+POST http://localhost:8080/api/v1/employees HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "Dede",
+    "phoneNumber": "0817213232",
+    "address": "Jl. Bengkuang No. 5"
+}
+
+###
+POST http://localhost:8080/api/v1/products HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "Setrika",
+    "price": 20000,
+    "uom": "KG"
+}
+
+###
+POST http://localhost:8080/api/v1/customers HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "Dede",
+    "phoneNumber": "0817213232",
+    "address": "Jl. Bengkuang No. 5"
+}
+
+###
+PUT  http://localhost:8080/api/v1/employees/bdb976a9-b856-48ca-85ec-2380cff2b492 HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "Rafael",
+    "phoneNumber": "087823027721",
+    "address": "Jl. Kopo Cetarip Timur 2 No. 4"
+}
+
+###
+DELETE http://localhost:8080/api/v1/employees/bdb976a9-b856-48ca-85ec-2380cff2b492 HTTP/1.1
+
+###
+POST http://localhost:8080/api/v1/bills HTTP/1.1
+Content-Type: application/json
+
+{
+ "billDate":"2023-10-03T16:30:00Z",
+ "employeeID":"6f961d0c-7dca-49f6-b3dc-dd7666205738",
+ "customerID":"fb1e1cbb-48cd-4f49-a9df-49787c716d26",
+ "billDetails":[
+    {
+        "productID": "bd5e1247-9309-40c7-a740-97e512442ca9",
+        "qty": 2
+    }
+]
+}
+
+###
+GET http://localhost:8080/api/v1/bills HTTP/1.1
+
+###
+POST http://localhost:8080/api/v1/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "rafly123232",
+    "password": "admin"
+}
+
+###
+POST http://localhost:8080/api/v1/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "rafly123",
+    "password": "admin"
+}

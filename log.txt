@@ -1,0 +1,2 @@
+time="2023-10-04T15:20:53+07:00" level=info msg="{2023-10-04 15:20:53.5796153 +0700 +07 m=+6.754285701 0s 200 127.0.0.1 GET /api/v1/bills/ vscode-restclient}"
+time="2023-10-04T15:49:12+07:00" level=info msg="{2023-10-04 15:49:12.775904 +0700 +07 m=+48.795466101 0s 200 127.0.0.1 GET /api/v1/bills/ vscode-restclient}"
